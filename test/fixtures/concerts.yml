@@ -1,15 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  from: 2015-06-13 20:27:12
-  to: 2015-06-13 20:27:12
-  night_id: 
-  venue_id: 
+concert:
+  title: My Favourite Band
+  from: '19:45'
+  to: '20:00'
+  night: one
+  venue: steibi
 
-two:
+end_time_missing:
   title: MyString
-  from: 2015-06-13 20:27:12
-  to: 2015-06-13 20:27:12
-  night_id: 
-  venue_id: 
+  from: '19:45'
+  night: two
+  venue: steibi
+
+begin_time_missing:
+  title: MyString
+  to: '19:45'
+  night: two
+  venue: steibi
+
+both_times_missing:
+  title: MyString
+  night: two
+  venue: steibi

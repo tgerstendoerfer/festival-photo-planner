@@ -1,0 +1,19 @@
+%h1= 'Einsatzplan 40. Winterthurer Musikfestwochen'
+-old_night_id = nil
+-old_venue_id = nil
+%table
+  %tr
+    %th.date= t 'Datum'
+    %th.venue= t 'Ort'
+    %th.time= t 'Zeit'
+    %th.concert= t 'Event'
+  -@concerts.each do |concert|
+    -rowclass = nil
+    -rowclass = :beginnight if old_night_id != concert.night_id
+    %tr{ class: rowclass }
+      %td.date= l concert.night.date, format: '%a %d.%m.' if old_night_id != concert.night_id
+      %td.venue= concert.venue.name if old_venue_id != concert.venue_id
+      %td.time= concert.time
+      %td.concert= concert.title
+      -old_night_id = concert.night_id
+      -old_venue_id = concert.venue_id
