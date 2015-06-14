@@ -20,4 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  date:
+    formats:
+      short: "%a %m/%d"
+
+  Date: "Date"
+  Venue: "Venue"
+  Time: "Time"
+  Concert: "Concert"
