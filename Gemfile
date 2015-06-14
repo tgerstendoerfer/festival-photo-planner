@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Heroku integration
 gem 'rails_12factor', group: :production
 
+# Run on Puma
+gem 'puma', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use PostgreSQL
