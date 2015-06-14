@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root :to => redirect('/mfw-2015')
+  root :to => redirect('/mfw-2015', status: 302)
 
   get 'mfw-2015' => 'schedule#index'
 
